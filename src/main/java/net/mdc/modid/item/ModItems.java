@@ -22,12 +22,14 @@ public class ModItems {
 
     // TO add a new item
     public static final Item FLUORITE = registerItem("fluorite", Item::new);
+    public static final Item RAW_FLUORITE = registerItem("raw_fluorite", Item::new);
 
     public static void registerModItems() {
         TemplateMod.LOGGER.info("Registering Mod Items for " + TemplateMod.MOD_ID);
 
         CreativeModeTabEvents.modifyOutputEvent(CreativeModeTabs.INGREDIENTS).register(output -> {
             output.accept(FLUORITE);
+            output.accept(RAW_FLUORITE);
         });
     }
 }
